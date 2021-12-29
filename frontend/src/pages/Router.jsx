@@ -16,7 +16,7 @@ import {
   TheaterList,
   Theater,
 } from ".";
-import { Footer, Header } from "../components";
+import { Header } from "../components";
 
 const Router = () => {
   return (
@@ -39,7 +39,6 @@ const Router = () => {
         <Route path="/CreateArticle" element={<CreateArticle />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
-      <Footer />
     </BrowserRouter>
   );
 };
