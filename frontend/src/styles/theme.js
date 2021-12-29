@@ -46,7 +46,7 @@ const colors = {
 
 const neons = {
   textNeonGold: `
-    text-shadow: 0px 0px 8px ${colors.mainPoint};
+    text-shadow: 0px 0px 30px ${colors.mainPoint}, 0px 0px 30px ${colors.mainPoint}, 0px 0px 30px ${colors.mainPoint}, 0px 0px 30px ${colors.mainPoint};
   `,
   boxNeonGold: `
     box-shadow: 0px 0px 30px 3px ${colors.mainPoint};
