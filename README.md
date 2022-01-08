@@ -57,7 +57,7 @@
 | 이영민 | 데이터분석 |
 | 장훈 | 프론트엔드 |
 
-## 데이터분석 파트의 git은 
+### 데이터분석 파트의 git은 https://kdt-gitlab.elice.io/003-part3-ottservice/team6/data-analysis
 
 **멤버별 responsibility**
 
