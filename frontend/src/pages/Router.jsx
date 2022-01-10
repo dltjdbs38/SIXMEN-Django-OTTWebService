@@ -13,6 +13,8 @@ import {
   Theater,
 } from ".";
 import { Header } from "../components";
+import Contents2 from "./Contents2";
+import Contents3 from "./Contents3";
 
 const Router = () => {
   return (
@@ -27,6 +29,8 @@ const Router = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/main" element={<Main />} />
         <Route path="/contents" element={<Contents />} />
+        <Route path="/contents2" element={<Contents2 />} />
+        <Route path="/contents3" element={<Contents3 />} />
         <Route path="/theater_list" element={<TheaterList />} />
         <Route path="/theater/:id" element={<Theater />} />
         <Route path="/*" element={<NotFound />} />

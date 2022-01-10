@@ -10,7 +10,6 @@ const StyledInput = styled.input`
   width: 100%;
   outline: none;
   border: 0.1rem solid #ededed;
-  /* border-radius: 1.2rem; */
   box-sizing: border-box;
   color: #333;
   margin-top: 1rem;
@@ -21,7 +20,6 @@ const StyledInput = styled.input`
 
   /* 크기 */
   height: 4rem;
-  /* margin: 0.4rem 1rem 1.5rem 1rem; */
   margin-bottom: 5rem;
   ${theme("fonts.textH4")}
   ${theme("neons.boxNeonGold")}

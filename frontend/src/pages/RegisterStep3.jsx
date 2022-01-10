@@ -4,7 +4,7 @@ import { theme } from "styled-tools";
 import { useNavigate, useLocation } from "react-router-dom";
 import Fade from "react-reveal/Fade";
 import { Button, PosterList } from "../components";
-// import { client } from "../libs";
+import { client } from "../libs";
 
 export default function RegisterStep3() {
   const navigate = useNavigate();

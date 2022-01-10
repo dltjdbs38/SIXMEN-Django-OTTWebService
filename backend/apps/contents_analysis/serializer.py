@@ -1,5 +1,12 @@
 from rest_framework import serializers
 from .models import ReviewScore, ReviewScoreT
+from apps.user.models import User
+
+class FirstAnalysisSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=User
+        fields=('__all__')
+
 
 class ThirdReviewScoreSerializer(serializers.ModelSerializer):
     class Meta:

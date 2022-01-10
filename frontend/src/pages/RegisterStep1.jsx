@@ -18,7 +18,7 @@ function Register() {
     password: "",
     nickname: "",
     birthday: "",
-    gender: "1",
+    gender: "male",
     watch_time: 1,
     prefer_ott_content_genres: [],
   });

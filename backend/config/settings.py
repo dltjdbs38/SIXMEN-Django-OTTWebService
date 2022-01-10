@@ -96,9 +96,9 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware', # CORS 추가
+    'django.middleware.common.CommonMiddleware', # 추가
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware', # 추가
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -160,8 +160,8 @@ DATABASES = {
     'default' : {
         'ENGINE': 'django.db.backends.mysql', 
         'NAME': 'ott_service_database',  # DB이름                
-        'USER': 'root', # DB로그인 유저명                          
-        'PASSWORD': '2140',  #DB로그인 비밀번호    
+        'USER': 'soryeongk', # DB로그인 유저명                          
+        'PASSWORD': 'soryeongk1234',  #DB로그인 비밀번호    
         'HOST': 'localhost',  # 172.30.106.202 얘는 내 윈도우데스크탑 켜고끌때마다 바뀜                   
         'PORT': '3306',                          
     }

@@ -31,6 +31,8 @@ class CreateUserSerializer(serializers.ModelSerializer):
     def create(self,validated_data):
         genre_data=validated_data.pop('prefer_ott_content_genres')
         user=User.objects.create(**validated_data)
+        user.set_password(validated_data['password'])
+        user.save()
         #genre엔 preferottgenre_id가 하나씩 들어있음
         for genre in genre_data:
             user.prefer_ott_content_genres.add(genre)

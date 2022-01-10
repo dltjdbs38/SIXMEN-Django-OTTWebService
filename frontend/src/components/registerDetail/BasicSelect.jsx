@@ -22,8 +22,8 @@ export default function BasicSelect(props) {
       <InputWrapper>
         <Label>성별</Label>
         <Select selectWidth="17.4rem" name="gender" form="Gender" placeholder="성별" onChange={onChangeHandler}>
-          <option value="1">남자</option>
-          <option value="0">여자</option>
+          <option value="male">남자</option>
+          <option value="female">여자</option>
         </Select>
       </InputWrapper>
     </InputsWrapper>
