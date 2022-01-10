@@ -10,7 +10,7 @@ export default function Contents2() {
 
   const [userData3, setUserData3] = useState([]);
   const fetchData3 = async () => {
-    axios.post("    http://127.0.0.1:8000/api/contents-analysis/3").then((res) => setUserData3(res.data));
+    axios.post(`${process.env.REACT_APP_BASE_URL}/contents-analysis/3`).then((res) => setUserData3(res.data));
   };
 
   useEffect(() => {

@@ -10,7 +10,7 @@ export default function Contents3() {
   const [userData5, setUserData5] = useState([]);
   const fetchData5 = async (token) => {
     axios.defaults.headers.common["Authorization"] = `JWT ${token}`;
-    axios.post("http://127.0.0.1:8000/api/contents-analysis/5").then((res) => setUserData5(res.data));
+    axios.post(`${process.env.REACT_APP_BASE_URL}/contents-analysis/5`).then((res) => setUserData5(res.data));
   };
   useEffect(() => {
     const userToken = window.localStorage.getItem("token");

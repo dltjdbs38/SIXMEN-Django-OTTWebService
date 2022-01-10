@@ -13,7 +13,7 @@ export default function Contents() {
   const [age, setAge] = useState("");
 
   const fetchData1 = async () => {
-    axios.post("http://127.0.0.1:8000/api/contents-analysis/1").then((res) => setUserData1(res.data.data));
+    axios.post(`${process.env.REACT_APP_BASE_URL}/contents-analysis/1`).then((res) => setUserData1(res.data.data));
   };
 
   useEffect(() => {
