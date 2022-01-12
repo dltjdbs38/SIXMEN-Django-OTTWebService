@@ -1,5 +1,7 @@
 # (SIXMEN))
 - 코로나로 지친 사람들을 위한 맞춤형 비대면 극장 커뮤니티 서비스
+(현재 서윤 바탕화면에 있음)
+![image](https://user-images.githubusercontent.com/74050826/149137570-e1b36fed-875c-4564-a44a-453684c3b65d.png)
 
 
 ## 프로젝트 구성 안내
