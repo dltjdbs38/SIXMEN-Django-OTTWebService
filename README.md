@@ -1,4 +1,4 @@
-# (SIXMEN))
+# (SIXMEN)
 - 코로나로 지친 사람들을 위한 맞춤형 비대면 극장 커뮤니티 서비스
 (현재 서윤 바탕화면에 있음 - 윈도우, conda 가상환경 sixmanenv python 3.6으로, mysql, conda 환경변수 설정하기)
 ![image](https://user-images.githubusercontent.com/74050826/162146942-7052d3fe-6e2c-4f98-a857-3625fd655707.png)
