@@ -15,6 +15,7 @@ import {
 import { Header } from "../components";
 import Contents2 from "./Contents2";
 import Contents3 from "./Contents3";
+import Create from "./Create";
 
 const Router = () => {
   return (
@@ -34,6 +35,7 @@ const Router = () => {
         <Route path="/theater_list" element={<TheaterList />} />
         <Route path="/theater/:id" element={<Theater />} />
         <Route path="/*" element={<NotFound />} />
+        <Route path="/create" element={<Create />} />
       </Routes>
     </BrowserRouter>
   );

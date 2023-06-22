@@ -9,3 +9,4 @@ export { default as RegisterStep2 } from "./RegisterStep2";
 export { default as RegisterDone } from "./RegisterDone";
 export { default as RegisterStep1 } from "./RegisterStep1";
 export { default as RegisterStep3 } from "./RegisterStep3";
+export { default as Create } from "./Create";

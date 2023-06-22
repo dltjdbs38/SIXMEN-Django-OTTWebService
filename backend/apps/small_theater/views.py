@@ -12,6 +12,8 @@ from .models import SmallTheater
 from urllib import parse
 from django.db.models import Q
 from rest_framework.permissions import AllowAny
+import json
+from datetime import datetime
 
 # 여기 삭제하지 말아주세용..
 # class SmallTheaterList(APIView): # 소극장 목록 보기
@@ -59,7 +61,43 @@ class SmallTheaterList(APIView): # 소극장 목록 보기
         #     final_queryset = queryset.order_by('-published_date')
         target_theater_serializer = SmallTheaterSerializer(final_queryset, many=True)
         return Response(target_theater_serializer.data, status=status.HTTP_200_OK)
+    
+    def post(self,request): # 새로운 소모임 기능 추가
+        ## sol1. serializer.data 이용
+        # serializer = SmallTheaterSerializer(data=request.data)
+        # if serializer.is_valid(): # 유효성 검사
+        #     serializer.save() # ORM 사용 - 새로 만든 소모임 저장
+        #     return Response(serializer.data, status=status.HTTP_200_OK)
+        # return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+        ## sol2. request.POST 이용
+        if request.META['CONTENT_TYPE']=='application/json':
+            request = json.loads(request.body)
+            new_theater = SmallTheater(# id = request['id'],
+                                       # published_date = request['published_date'],
+                                       published_date =  datetime.today().strftime("%Y-%m-%d"),
+                                       title = request['title'],
+                                       theater_owner = request['theater_owner'],
+                                       theater_genre1 = request['theater_genre1'],
+                                       theater_genre2 = request['theater_genre2'],
+                                       introduce = request['introduce'],
+                                       notice = request['notice'],
+                                       )
+        else:
+            new_theater = SmallTheater(# id = request.POST['id'],
+                                       # published_date = request.POST['published_date'],
+                                       published_date =  datetime.today().strftime("%Y-%m-%d"),
+                                       title = request.POST['title'],
+                                       theater_owner = request.POST['theater_owner'],
+                                       theater_genre1 = request.POST['theater_genre1'],
+                                       theater_genre2 = request.POST['theater_genre2'],
+                                       introduce = request.POST['introduce'],
+                                       notice = request.POST['notice'],
+                                       )
+        new_theater.save() # ORM
+        target_theater_serializer = SmallTheaterSerializer(new_theater)
+        return Response(target_theater_serializer.data, status=status.HTTP_200_OK)
+    
 class SmallTheaterDetail(APIView): # 소극장 상세보기
     # http://127.0.0.1:8000/small-theater/3
     permission_classes=(AllowAny,)

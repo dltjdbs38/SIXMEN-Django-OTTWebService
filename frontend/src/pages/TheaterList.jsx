@@ -4,10 +4,12 @@ import { theme } from "styled-tools";
 import { Table, Button } from "../components";
 import { Input } from "../components/registerDetail/BasicSelect";
 import { client } from "../libs";
+import { useNavigate } from "react-router-dom";
 
 const tHeadList = ["극장 개관일", "극장이름", "극장주인", "주요 관심 장르"];
 
 export default function TheaterList() {
+  const navigate = useNavigate();
   const [inputValue, setInputValue] = useState("");
   const [tableList, setTableList] = useState([]);
 
@@ -51,7 +53,9 @@ export default function TheaterList() {
         <span>전체 소극장 목록</span>
         <Table tHeadList={tHeadList} tBodyList={tableList} />
       </TableWrapper>
-      <Button isMini={true}>소극장 생성하기</Button>
+      <Button isMini={true} onClick={() => navigate("/create")}>
+        소극장 생성하기
+      </Button>
     </Wrapper>
   );
 }
